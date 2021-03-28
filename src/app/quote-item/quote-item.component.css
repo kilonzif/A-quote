@@ -2,14 +2,12 @@
   background-color: rgb(28, 29, 29);
   margin: 10px;
   width: 520px;
-  padding: 15px;
+  padding: 25px;
+  border-radius: 20px;
 }
 .title {
   display: flex;
   justify-content: space-between;
-}
-.icon img {
-  height: 32px;
 }
 
 .quote-author {
@@ -20,5 +18,11 @@
 .quote-details {
   margin-top: 10px;
   border-top: 1px solid white;
-  /* display: none; */
+
+}
+
+.details-button {
+  display: flex;
+  justify-content: flex-end;
+
 }
