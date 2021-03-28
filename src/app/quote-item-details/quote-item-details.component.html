@@ -1,9 +1,11 @@
 <div class="details-wrapper">
   <div class="votes icon mt-3 pl-2">
     <img class="pr-2" src="../../assets/img/like.png" alt="" />
-    <span class="upvotes pr-5">0</span>
+    <span class="upvotes pr-5">{{ quote.likes }}</span>
     <img class="pr-2 mt-2" src="../../assets/img/dislike.png" alt="" />
-    <span class="upvotes">0</span>
+    <span class="upvotes">{{ quote.dislikes }}</span>
   </div>
-  <div class="userDetails mt-3">posted by USERNAME ON 20/12/2012</div>
+  <div class="userDetails mt-3">
+    posted by {{ quote.userName }} on {{ quote.datePosted | date }}
+  </div>
 </div>
