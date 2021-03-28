@@ -1,0 +1,15 @@
+.form-wrapper{
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="text"]:focus,
+input[type="email"],
+input[type="email"]:focus,
+textarea[type="text"],
+textarea[type="text"]:focus {
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+}

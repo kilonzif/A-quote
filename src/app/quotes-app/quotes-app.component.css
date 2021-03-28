@@ -38,15 +38,15 @@
 .app-wrapper {
 
   width: 100%;
-  background-color: aqua !important;
+  /* background-color: aqua !important; */
   padding: 10px;
 }
 .col-md-8{
-    background-color: rgb(38, 0, 255) !important;
+    /* background-color: rgb(38, 0, 255) !important; */
 
 }
 .col-md-4{
-  background-color: rgb(51, 255, 0) !important;
+  /* background-color: rgb(51, 255, 0) !important; */
 
 }
 /* .col-md-4 {
