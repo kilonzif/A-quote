@@ -1,6 +1,6 @@
 <div class="form-wrapper">
   <h3 class="text-center">Add Quote</h3>
-  <form>
+  <form (ngSubmit)="submitQuote(); quoteForm.resetForm({})" #quoteForm="ngForm">
     <div class="mb-3">
       <label for="quoteTitle" class="form-label">Quote Title</label>
       <input
@@ -8,23 +8,49 @@
         class="form-control"
         id="quoteTitle"
         [(ngModel)]="newQuote.quoteTitle"
-        name="name"
-        #name="ngModel"
-        placeholder="Add todo"
+        name="quoteTitle"
+        #quoteTitle="ngModel"
+        placeholder="Add Quote title"
         required
       />
     </div>
     <div class="mb-3">
-      <label for="quoteTitle" class="form-label">Quote</label>
-      <textarea type="text" class="form-control" cols="30" rows="4"></textarea>
+      <label for="quote" class="form-label">Quote</label>
+      <textarea
+        id="quote"
+        type="text"
+        class="form-control"
+        cols="30"
+        rows="4"
+        [(ngModel)]="newQuote.quoteText"
+        name="  quoteText"
+        #quote="ngModel"
+        placeholder="Add Quote"
+      ></textarea>
     </div>
     <div class="mb-3">
-      <label for="quoteTitle" class="form-label">Quote Author</label>
-      <input type="text" class="form-control" id="quoteTitle" />
+      <label for="quoteAuthor" class="form-label">Quote Author</label>
+      <input
+        type="text"
+        class="form-control"
+        id="quoteAuthor"
+        [(ngModel)]="newQuote.authorName"
+        name="authorName"
+        #authorName="ngModel"
+        placeholder="Add author name"
+      />
     </div>
     <div class="mb-3">
-      <label for="quoteTitle" class="form-label">Your Name</label>
-      <input type="text" class="form-control" id="quoteTitle" />
+      <label for="userName" class="form-label">Your Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="userName"
+        [(ngModel)]="newQuote.userName"
+        name="userName"
+        #userName="ngModel"
+        placeholder="Add your name"
+      />
     </div>
 
     <button type="submit" class="btn btn-outline-success">Submit</button>
