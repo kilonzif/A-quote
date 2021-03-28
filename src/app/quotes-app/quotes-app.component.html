@@ -28,10 +28,10 @@
   <div class="container-fluid app-wrapper">
     <div class="row">
       <div class="col-md-4 mb-5">
-        <app-quotes-form></app-quotes-form>
+        <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
       </div>
-      <div class="col-md-8 ">
-        <app-quotes-list></app-quotes-list>
+      <div class="col-md-8">
+        <app-quotes-list [quotes]="quotes"></app-quotes-list>
       </div>
     </div>
   </div>

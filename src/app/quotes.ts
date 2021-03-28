@@ -8,7 +8,7 @@ export class Quotes {
     public userName: string,
     public datePosted: Date,
     public likes: number,
-    public dislikes: string
+    public dislikes: number
   ) {
     this.showDetails = false;
   }
