@@ -1,13 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Roboto:ital@1&display=swap");
 
-*{
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif; */
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   height: 100vh;
-
 }
