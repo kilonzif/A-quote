@@ -13,8 +13,8 @@ export class QuoteItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  setComplete = (index: any) => {
-    // this.quote[index].showDetails = !this.quote[index].showDetails;
+  toggleShowDetails = () => {
+    this.quote.showDetails = !this.quote.showDetails;
   };
 
   deleteQuote = (id: any) => {

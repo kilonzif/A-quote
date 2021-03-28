@@ -10,10 +10,12 @@ font-family: 'Roboto', sans-serif; */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: 0.5s all;
 }
 
 body {
   height: 100%;
+  background-color: #191919;
 }
 
 .icon img {

@@ -3,24 +3,40 @@
     <div class="title">
       <div class="quote-title">{{ quote.quoteTitle }}</div>
       <div class="icon">
-        <img src="../../assets/img/trash.png" alt="" />
+        <img
+          *ngIf="quote.showDetails"
+          src="../../assets/img/trash.png"
+          alt=""
+        />
       </div>
     </div>
-    <div class="qoute">
+    <div class="main-quote">
       <p>
         {{ quote.quote }}
       </p>
     </div>
     <div class="quote-author">
-      <div class="author">{{quote.authorName}}</div>
+      <div class="author">{{ quote.authorName }}</div>
       <div class="posted-date">posted 591 days ago</div>
     </div>
     <div class="details-button">
-      <button class="btn btn-outline-primary mt-3 ml-auto">Show More</button>
-      <button class="btn btn-outline-primary" hidden>Less</button>
+      <button
+        class="btn btn-outline-primary mt-3 text-white"
+        *ngIf="!quote.showDetails"
+        (click)="toggleShowDetails()"
+      >
+        Show More
+      </button>
+      <button
+        class="btn btn-outline-primary mt-3 text-white"
+        *ngIf="quote.showDetails"
+        (click)="toggleShowDetails()"
+      >
+        Show Less
+      </button>
     </div>
   </div>
-  <div class="quote-details mt-3">
+  <div class="quote-details mt-3" *ngIf="quote.showDetails">
     <app-quote-item-details [quote]="quote"></app-quote-item-details>
   </div>
 </div>

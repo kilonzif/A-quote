@@ -9,6 +9,10 @@
   display: flex;
   justify-content: space-between;
 }
+.main-quote{
+  padding-top: 20px;
+  height: 140px;
+}
 
 .quote-author {
   display: flex;
