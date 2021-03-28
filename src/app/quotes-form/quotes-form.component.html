@@ -3,7 +3,16 @@
   <form>
     <div class="mb-3">
       <label for="quoteTitle" class="form-label">Quote Title</label>
-      <input type="text" class="form-control" id="quoteTitle" />
+      <input
+        type="text"
+        class="form-control"
+        id="quoteTitle"
+        [(ngModel)]="newQuote.quoteTitle"
+        name="name"
+        #name="ngModel"
+        placeholder="Add todo"
+        required
+      />
     </div>
     <div class="mb-3">
       <label for="quoteTitle" class="form-label">Quote</label>
