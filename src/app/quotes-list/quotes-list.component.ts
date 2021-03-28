@@ -11,4 +11,8 @@ export class QuotesListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  deleteQuote = (id: any) => {
+    this.quotes.splice(id, 1);
+  };
 }

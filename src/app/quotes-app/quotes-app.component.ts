@@ -24,7 +24,8 @@ export class QuotesAppComponent implements OnInit {
       'Hughes',
       new Date(2020, 7, 1),
       0,
-      0
+      0,
+      false
     ),
     new Quotes(
       1,
@@ -34,7 +35,8 @@ export class QuotesAppComponent implements OnInit {
       'Hughes',
       new Date(2002, 2, 14),
       0,
-      0
+      0,
+      false
     ),
     new Quotes(
       1,
@@ -44,16 +46,16 @@ export class QuotesAppComponent implements OnInit {
       'Hughes',
       new Date(2013, 7, 11),
       0,
-      0
+      0,
+      false
     ),
   ];
   constructor() {}
 
-  ngOnInit(): void { }
-  
+  ngOnInit(): void {}
 
-//?Add new quote
-  addNewQuote = (quote) => {
+  //?Add new quote
+  addNewQuote = (quote: any) => {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
     quote.datePosted = new Date();
