@@ -9,6 +9,7 @@ import { QuotesListComponent } from './quotes-list/quotes-list.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { QuoteItemComponent } from './quote-item/quote-item.component';
 import { QuoteItemDetailsComponent } from './quote-item-details/quote-item-details.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { QuoteItemDetailsComponent } from './quote-item-details/quote-item-detai
     QuotesFormComponent,
     QuoteItemComponent,
     QuoteItemDetailsComponent,
+    DateCountPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

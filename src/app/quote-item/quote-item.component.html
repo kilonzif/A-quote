@@ -18,7 +18,9 @@
     </div>
     <div class="quote-author">
       <div class="author">{{ quote.authorName }}</div>
-      <div class="posted-date">posted 591 days ago</div>
+      <div class="posted-date">
+        posted {{ quote.datePosted | dateCount }} days ago
+      </div>
     </div>
     <div class="details-button">
       <button
