@@ -1,6 +1,9 @@
 <div class="form-wrapper">
   <h3 class="text-center">Add Quote</h3>
-  <form (ngSubmit)="submitQuote(); quoteForm.resetForm({})" #quoteForm="ngForm">
+  <form
+    #quoteForm="ngForm"
+    (ngSubmit)="quoteForm.form.valid && submitQuote(); quoteForm.resetForm({})"
+  >
     <div class="mb-3">
       <label for="quoteTitle" class="form-label">Quote Title</label>
       <input
@@ -12,6 +15,9 @@
         #quoteTitle="ngModel"
         placeholder="Add Quote title"
         required
+        [ngClass]="{
+          'border-danger': quoteTitle.pristine && quoteTitle.invalid
+        }"
       />
     </div>
     <div class="mb-3">

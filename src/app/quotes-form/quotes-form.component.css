@@ -1,4 +1,4 @@
-.form-wrapper{
+.form-wrapper {
   padding: 20px;
 }
 
@@ -12,4 +12,8 @@ textarea[type="text"]:focus {
   color: #fff;
   font-size: 20px;
   outline: none;
+}
+
+.border-danger {
+  border: 1px solid red !important;
 }

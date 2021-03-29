@@ -40,6 +40,6 @@
     </div>
   </div>
   <div class="quote-details mt-3" *ngIf="quote.showDetails">
-    <app-quote-item-details [quote]="quote"></app-quote-item-details>
+    <app-quote-item-details [quote]="quote" (likeQoute)="upvote()" (dislikeQuote)="downvote()"></app-quote-item-details>
   </div>
 </div>

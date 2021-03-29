@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -8,7 +8,16 @@ import { Quotes } from '../quotes';
 })
 export class QuoteItemDetailsComponent implements OnInit {
   @Input() quote: Quotes;
+  @Output() like = new EventEmitter();
+  @Output() dislike = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
+
+  likeQuote = () => {
+    this.like.emit();
+  };
+  dislikeQuote = () => {
+    this.dislike.emit();
+  };
 }

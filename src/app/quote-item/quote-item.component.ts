@@ -16,6 +16,12 @@ export class QuoteItemComponent implements OnInit {
   toggleShowDetails = () => {
     this.quote.showDetails = !this.quote.showDetails;
   };
+  upvote() {
+    this.quote.likes += 1;
+  }
+  downvote() {
+    this.quote.dislikes += 1;
+  }
 
   deleteQuote = (id: any) => {
     this.delete.emit(id);

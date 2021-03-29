@@ -1,8 +1,8 @@
 <div class="details-wrapper">
   <div class="votes icon mt-3 pl-2">
-    <img class="pr-2" src="../../assets/img/like.png" alt="" />
+    <img class="pr-2" src="../../assets/img/like.png" alt="" (click)="likeQuote()" />
     <span class="upvotes pr-5">{{ quote.likes }}</span>
-    <img class="pr-2 mt-2" src="../../assets/img/dislike.png" alt="" />
+    <img class="pr-2 mt-2" src="../../assets/img/dislike.png" alt="" (click)="dislikeQuote()" />
     <span class="upvotes">{{ quote.dislikes }}</span>
   </div>
   <div class="userDetails mt-3">
