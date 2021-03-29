@@ -1,21 +1,13 @@
 .main-wrapper {
-  /* background-image: url("../../assets/img/backgound.jpg"); */
-  height: 100%;
-
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- filter: grayscale(150%); */
-  padding-top: 25px;
+    height: 100%;
   color: #fff;
 }
 
 .navbar {
-  padding: 2px !important;
+  /* padding: 2px !important; */
   background-color: #111111 !important;
-  border-radius: 20px;
-  /* box-shadow: 0px 0px 28px rgba(197, 12, 12, 0.8), 0 -10px 20px -5px #27637b,
-    0 -10px 20px -5px #272f7b, 0 -10px 20px -5px #272f7b; */
+  /* border-radius: 20px; */
+  
 }
 
 .navbar a {
@@ -23,9 +15,10 @@
 }
 
 .newBtn {
-  border: 1px solid #fff;
+  border-left: 1px solid #fff;
   margin-right: 15px;
   transition: 0.5s all;
+  font-size: 18px;
 }
 .newBtn:hover {
   border: 1px solid #111111;
@@ -55,3 +48,10 @@
   background-color: azure;
   display: none;
 } */
+
+
+/* .quote-list {
+  height: 100vh;
+  flex: 2 1 auto;
+} */
+

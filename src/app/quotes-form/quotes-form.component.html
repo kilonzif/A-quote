@@ -1,5 +1,11 @@
 <div class="form-wrapper">
-  <h3 class="text-center">Add Quote</h3>
+  <div class="quote-intro">
+    <h3 class="text-center">
+      <em>"</em> The Wisdom of the wise and the experience of ages ,may be
+      preserved by quotation <em>"</em>
+    </h3>
+    <h4 class="btn btn-outline-success mb-4 text-center">Add Qoute</h4>
+  </div>
   <form
     #quoteForm="ngForm"
     (ngSubmit)="quoteForm.form.valid && submitQuote(); quoteForm.resetForm({})"
@@ -16,7 +22,7 @@
         placeholder="Add Quote title"
         required
         [ngClass]="{
-          'border-danger': quoteTitle.pristine && quoteTitle.invalid
+          'border-danger': quoteTitle.pristine && quoteTitle.valid
         }"
       />
     </div>

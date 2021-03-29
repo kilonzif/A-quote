@@ -18,6 +18,8 @@ export class QuoteItemComponent implements OnInit {
   };
   upvote() {
     this.quote.likes += 1;
+    console.log(this.quote.likes);
+    
   }
   downvote() {
     this.quote.dislikes += 1;

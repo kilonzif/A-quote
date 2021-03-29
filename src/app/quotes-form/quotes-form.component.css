@@ -17,3 +17,8 @@ textarea[type="text"]:focus {
 .border-danger {
   border: 1px solid red !important;
 }
+
+.quote-intro{
+  display: flex;
+  flex-direction: column;
+}

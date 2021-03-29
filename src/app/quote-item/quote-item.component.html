@@ -1,4 +1,4 @@
-<div class="quote-container">
+<div class="quote-container" [style.border-color]="quote.color">
   <div class="quote-wrapper">
     <div class="title">
       <div class="quote-title">{{ quote.quoteTitle }}</div>
@@ -12,9 +12,7 @@
       </div>
     </div>
     <div class="main-quote">
-      <p>
-        {{ quote.quoteText }}
-      </p>
+      <p><em>"</em> {{ quote.quoteText }} <em>"</em></p>
     </div>
     <div class="quote-author">
       <div class="author">{{ quote.authorName }}</div>
@@ -40,6 +38,10 @@
     </div>
   </div>
   <div class="quote-details mt-3" *ngIf="quote.showDetails">
-    <app-quote-item-details [quote]="quote" (likeQoute)="upvote()" (dislikeQuote)="downvote()"></app-quote-item-details>
+    <app-quote-item-details
+      [quote]="quote"
+      (like)="upvote()"
+      (dislike)="downvote()"
+    ></app-quote-item-details>
   </div>
 </div>

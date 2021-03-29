@@ -8,6 +8,7 @@ export class Quotes {
     public datePosted: Date,
     public likes: number,
     public dislikes: number,
-    public showDetails: boolean
+    public showDetails: boolean,
+    public color: string
   ) {}
 }
