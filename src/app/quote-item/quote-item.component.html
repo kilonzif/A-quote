@@ -1,7 +1,11 @@
 <div class="quote-container" [style.border-color]="quote.color">
   <div class="quote-wrapper">
     <div class="title">
-      <div class="quote-title">{{ quote.quoteTitle }}</div>
+      <div class="quote-title">
+        {{ quote.quoteTitle }}
+        <hr [style.background-color]="quote.color" />
+      </div>
+
       <div class="icon">
         <img
           *ngIf="quote.showDetails"
@@ -11,11 +15,16 @@
         />
       </div>
     </div>
+    <!-- <p appHighlightDirective *ngIf ="highestUpvote()===quote.upvotes && quote.upvotes>0"><span class="display-text">Quote:</span><br> {{quote.quote}}</p> -->
     <div class="main-quote">
-      <p><em>"</em> {{ quote.quoteText }} <em>"</em></p>
+      <p class="text-center"><em>"</em> {{ quote.quoteText }} <em>"</em></p>
     </div>
     <div class="quote-author">
-      <div class="author">{{ quote.authorName }}</div>
+      <div class="author">
+        Author -
+
+        {{ quote.authorName }}
+      </div>
       <div class="posted-date">
         posted {{ quote.datePosted | dateCount }} days ago
       </div>

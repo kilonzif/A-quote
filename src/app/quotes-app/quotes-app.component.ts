@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
+
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-quotes-app',
   templateUrl: './quotes-app.component.html',
   styleUrls: ['./quotes-app.component.css'],
 })
 export class QuotesAppComponent implements OnInit {
+  closeResult = '';
+
+  constructor(private modalService: NgbModal) {}
+
   color: Array<any> = [
     '#ffd31d',
     '#42240c',
@@ -67,11 +73,7 @@ export class QuotesAppComponent implements OnInit {
       this.color[this.colorFunction()]
     ),
   ];
-  constructor() {}
 
-  ngOnInit(): void {}
-
-  //?Add new quote
   addNewQuote = (quote: any) => {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
@@ -79,4 +81,28 @@ export class QuotesAppComponent implements OnInit {
     quote.color = this.color[this.colorFunction()];
     this.quotes.push(quote);
   };
+
+  open(content: any) {
+    this.modalService
+      .open(content, { ariaLabelledBy: 'modal-basic-title' })
+      .result.then(
+        (result) => {
+          this.closeResult = `Closed with: ${result}`;
+        },
+        (reason) => {
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        }
+      );
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
+  ngOnInit(): void {}
 }

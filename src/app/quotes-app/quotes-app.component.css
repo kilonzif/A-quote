@@ -1,3 +1,7 @@
+/* font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif; */
+
+
 .main-wrapper {
   height: 100%;
   color: #fff;
@@ -5,28 +9,30 @@
 
 .navbar {
   background-color: #111111 !important;
+  width: 100vw;
 }
 
 .navbar a {
   color: #fff;
 }
 
-.newBtn {
-  border-left: 1px solid #fff;
-  margin-right: 15px;
-  transition: 0.5s all;
-  font-size: 18px;
-}
-.newBtn:hover {
-  border: 1px solid #111111;
-}
+
 
 .navbar .navbar-brand {
   font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
 }
 
 .app-wrapper {
   width: 100%;
-
   padding: 10px;
+}
+
+
+.modal-body {
+  
+  width: 700px;
+  color: #fff;
+  background-color: #191919 !important;
 }

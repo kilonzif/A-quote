@@ -11,6 +11,7 @@ import { QuoteItemComponent } from './quote-item/quote-item.component';
 import { QuoteItemDetailsComponent } from './quote-item-details/quote-item-details.component';
 import { DateCountPipe } from './date-count.pipe';
 import { HighestUpvoteDirective } from './highest-upvote.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { HighestUpvoteDirective } from './highest-upvote.directive';
     DateCountPipe,
     HighestUpvoteDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

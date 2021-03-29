@@ -8,6 +8,7 @@ import { Quotes } from '../quotes';
 export class QuotesFormComponent implements OnInit {
   newQuote = new Quotes(0, '', '', '', '', new Date(), 0, 0, false, 'blue');
   @Output() addQuote = new EventEmitter<Quotes>();
+  @Output() close = new EventEmitter();
 
   submitQuote() {
     this.addQuote.emit(this.newQuote);
@@ -23,6 +24,10 @@ export class QuotesFormComponent implements OnInit {
       false,
       'blue'
     );
+  }
+
+  closeModal() {
+    this.close.emit();
   }
   constructor() {}
 

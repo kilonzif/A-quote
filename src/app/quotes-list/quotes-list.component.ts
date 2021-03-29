@@ -12,11 +12,12 @@ export class QuotesListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-
   deleteQuote = (deleteRequest: boolean, id: any) => {
     deleteRequest = confirm('Are you sure you want to delete this?');
     if (deleteRequest == true) {
       this.quotes.splice(id, 1);
     }
   };
+
+
 }

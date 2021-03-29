@@ -1,17 +1,21 @@
 <div class="form-wrapper">
   <div class="quote-intro">
-    <h3 class="text-center">
+    <h4 class="text-center">
       <em>"</em> The Wisdom of the wise and the experience of ages ,may be
       preserved by quotation <em>"</em>
-    </h3>
-    <h4 class="btn btn-outline-success mb-4 text-center">Add Qoute</h4>
+    </h4>
+    <h4 class="btn newBtn mb-4 text-center text-white">Add Qoute</h4>
   </div>
   <form
     #quoteForm="ngForm"
-    (ngSubmit)="quoteForm.form.valid && submitQuote(); quoteForm.resetForm({})"
+    (ngSubmit)="
+      quoteForm.form.valid && submitQuote();
+      quoteForm.resetForm({});
+      closeModal()
+    "
   >
     <div class="mb-3">
-      <label for="quoteTitle" class="form-label">Quote Title</label>
+      <label for="quoteTitle" class="form-label">Add Quote title</label>
       <input
         type="text"
         class="form-control"
@@ -19,7 +23,7 @@
         [(ngModel)]="newQuote.quoteTitle"
         name="quoteTitle"
         #quoteTitle="ngModel"
-        placeholder="Add Quote title"
+      
         required
         [ngClass]="{
           'border-danger': quoteTitle.pristine && quoteTitle.valid
@@ -27,7 +31,7 @@
       />
     </div>
     <div class="mb-3">
-      <label for="quote" class="form-label">Quote</label>
+      <label for="quote" class="form-label">Add Quote</label>
       <textarea
         id="quote"
         type="text"
@@ -37,11 +41,11 @@
         [(ngModel)]="newQuote.quoteText"
         name="  quoteText"
         #quote="ngModel"
-        placeholder="Add Quote"
+      
       ></textarea>
     </div>
     <div class="mb-3">
-      <label for="quoteAuthor" class="form-label">Quote Author</label>
+      <label for="quoteAuthor" class="form-label">Add author name</label>
       <input
         type="text"
         class="form-control"
@@ -49,11 +53,11 @@
         [(ngModel)]="newQuote.authorName"
         name="authorName"
         #authorName="ngModel"
-        placeholder="Add author name"
+      
       />
     </div>
     <div class="mb-3">
-      <label for="userName" class="form-label">Your Name</label>
+      <label for="userName" class="form-label">Add your name</label>
       <input
         type="text"
         class="form-control"
@@ -61,7 +65,7 @@
         [(ngModel)]="newQuote.userName"
         name="userName"
         #userName="ngModel"
-        placeholder="Add your name"
+    
       />
     </div>
 
