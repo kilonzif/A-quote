@@ -10,6 +10,7 @@ import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { QuoteItemComponent } from './quote-item/quote-item.component';
 import { QuoteItemDetailsComponent } from './quote-item-details/quote-item-details.component';
 import { DateCountPipe } from './date-count.pipe';
+import { HighestUpvoteDirective } from './highest-upvote.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DateCountPipe } from './date-count.pipe';
     QuoteItemComponent,
     QuoteItemDetailsComponent,
     DateCountPipe,
+    HighestUpvoteDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

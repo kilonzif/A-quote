@@ -5,15 +5,6 @@ import { Quotes } from '../quotes';
   templateUrl: './quotes-app.component.html',
   styleUrls: ['./quotes-app.component.css'],
 })
-
-//   public id: number,
-// public quoteTitle: string,
-// public quote: string,
-// public authorName: string,
-// public userName: string,
-// public datePosted: Date,
-// public likes: number,
-// public dislikes: string
 export class QuotesAppComponent implements OnInit {
   color: Array<any> = [
     '#ffd31d',

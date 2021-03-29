@@ -1,13 +1,10 @@
 .main-wrapper {
-    height: 100%;
+  height: 100%;
   color: #fff;
 }
 
 .navbar {
-  /* padding: 2px !important; */
   background-color: #111111 !important;
-  /* border-radius: 20px; */
-  
 }
 
 .navbar a {
@@ -30,28 +27,6 @@
 
 .app-wrapper {
   width: 100%;
-  /* background-color: aqua !important; */
+
   padding: 10px;
 }
-.col-md-8 {
-  /* background-color: rgb(38, 0, 255) !important; */
-}
-.col-md-4 {
-  /* background-color: rgb(51, 255, 0) !important; */
-}
-/* .col-md-4 {
-  position: fixed;
-  top: 15;
-  left: 0;
-  width: 500px;
-  height: 100%;
-  background-color: azure;
-  display: none;
-} */
-
-
-/* .quote-list {
-  height: 100vh;
-  flex: 2 1 auto;
-} */
-

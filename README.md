@@ -1,18 +1,22 @@
 # AQuote
 
+## Description
+
+This is an angular apllication that allows user to create quotes.User can then upvote and downvote a quote and also he/she can delete the quote
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Author 
 
-## Code scaffolding
+[Mugera Hughes](https://github.com/MugeraH)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Firstly, in order to run this application in your local machine, you need to have installed npm and Angular.
+- Clone the application using `git clone https://github.com/MugeraH/A-quote.git`
+- Then run `npm install` to install application dependacies locally
+- Run `ng serve -o` to start application
 
 ## Running unit tests
 
@@ -22,6 +26,26 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## BDD
+
+- The user can add a quote by filling a form. The forms required inputs are the name of the person submitting the quote, the author of the quote and the quote. Upon submission of the form, the users quote will be displayed on the page.
+- The user can upvote or downvote a quote. The user will be able to see the number of upvotes a quote has. The user will also be able to see the quote with the highest upvotes.
+- The use can delete quotes.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Angular
+- Bootstrap
+
+
+## Contact
+
+For any further questions, contributions or feedback, get in touch with me through the following contacts;
+
+- Email: bwosihughes24@gmail.com
+- Phone: +254734505023

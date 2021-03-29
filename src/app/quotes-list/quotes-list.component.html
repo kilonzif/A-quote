@@ -1,10 +1,7 @@
 <div class="quote-wrapper">
-
-
-
   <app-quote-item
     *ngFor="let quote of quotes; let id = index"
     [quote]="quote"
-    (delete)="deleteQuote(id)"
+    (delete)="deleteQuote(false, id)"
   ></app-quote-item>
 </div>
