@@ -19,15 +19,14 @@ export class QuotesAppComponent implements OnInit {
     '#9a1f40',
     '#007892',
     '#63b7af',
-    '#abf0e9',
+    '#13ec0c',
     '#c81912',
-    '#f64b3c',
+    '#ec5e0c',
     '#fdba9a',
     '#45046a',
-    '#5c2a9d',
-    '#b5176b',
+    '#ec0ce1',
     '#f1ebbb',
-    '#5fdde5',
+    '#100cec',
   ];
 
   colorFunction = () => {
@@ -70,7 +69,6 @@ export class QuotesAppComponent implements OnInit {
       'Elbert Hubbard',
       'Hughes',
       new Date(2021, 2, 14),
-
       0,
       0,
       false,
@@ -78,7 +76,6 @@ export class QuotesAppComponent implements OnInit {
       false
     ),
   ];
-
 
   addNewQuote = (quote: any) => {
     let quoteLength = this.quotes.length;
@@ -88,6 +85,7 @@ export class QuotesAppComponent implements OnInit {
     this.quotes.push(quote);
   };
 
+  //Functions to toggle modal dispal
   open(content: any) {
     this.modalService
       .open(content, { ariaLabelledBy: 'modal-basic-title' })

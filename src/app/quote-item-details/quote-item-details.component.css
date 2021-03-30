@@ -7,3 +7,10 @@
     display: flex;
     justify-content: space-between;
 }
+hr {
+  margin-top: 1;
+  width: 100%;
+  display: block;
+  padding: 1px;
+  border-radius: 10px;
+}

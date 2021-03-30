@@ -1,6 +1,3 @@
-/* font-family: 'Pacifico', cursive;
-font-family: 'Roboto', sans-serif; */
-
 .main-wrapper {
   height: 100%;
   color: #fff;
@@ -10,6 +7,7 @@ font-family: 'Roboto', sans-serif; */
   background-color: #111111 !important;
   width: 100vw;
   padding: 0px 20px;
+
 }
 
 .navbar a {
@@ -20,6 +18,9 @@ font-family: 'Roboto', sans-serif; */
   font-size: 35px;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+}
+.nav-icon img{
+  height: 50px;
 }
 
 .app-wrapper {
@@ -34,7 +35,3 @@ font-family: 'Roboto', sans-serif; */
 }
 
 
-footer{
-  position: absolute;
-  bottom: 0;
-}

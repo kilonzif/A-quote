@@ -14,30 +14,29 @@
           </span>
         </div>
 
-        <hr [style.background-color]="quote.color" />
+    
       </div>
-
+    
       <div class="icon">
         <div class="details-button">
           <button
-            class="btn btn-outline-primary mt-3 text-white"
+            class="btn btn-outline-dark text-white"
             *ngIf="!quote.showDetails"
             (click)="toggleShowDetails()"
           >
             Show More
           </button>
           <button
-            class="btn btn-outline-primary mt-3 text-white"
+            class="btn btn-outline-dark text-white"
             *ngIf="quote.showDetails"
             (click)="toggleShowDetails()"
           >
             Show Less
           </button>
-        
         </div>
       </div>
     </div>
-
+<hr [style.background-color]="quote.color" />
     <div class="main-quote">
       <p *ngIf="!quote.isFavorite" class="text-center">
         <em>"</em> {{ quote.quoteText }} <em>"</em>

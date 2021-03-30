@@ -11,7 +11,7 @@ export class QuoteItemDetailsComponent implements OnInit {
   @Input() quote: Quotes;
   @Output() like = new EventEmitter();
   @Output() dislike = new EventEmitter();
-  @Output() highestLikes = new EventEmitter();
+
   @Output() vote = new EventEmitter();
   @Output() delete = new EventEmitter();
   constructor() {}
@@ -25,9 +25,7 @@ export class QuoteItemDetailsComponent implements OnInit {
   dislikeQuote = () => {
     this.dislike.emit();
   };
-  highest = () => {
-    this.highestLikes.emit();
-  };
+
 
   deleteQuote(id: any) {
     this.delete.emit();
