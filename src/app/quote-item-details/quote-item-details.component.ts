@@ -11,12 +11,14 @@ export class QuoteItemDetailsComponent implements OnInit {
   @Output() like = new EventEmitter();
   @Output() dislike = new EventEmitter();
   @Output() highestLikes = new EventEmitter();
+  @Output() vote = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
 
-  likeQuote = () => {
+  likeQuote = (voted: number) => {
     this.like.emit();
+    this.vote.emit(voted);
   };
   dislikeQuote = () => {
     this.dislike.emit();

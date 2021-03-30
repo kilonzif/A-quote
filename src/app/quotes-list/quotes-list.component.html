@@ -1,11 +1,12 @@
 <div class="quote-wrapper">
   <div class="container-fluid">
-    <div class="row ">
+    <div class="row">
       <app-quote-item
         class="col-md-5 col-sm-12"
         *ngFor="let quote of quotes; let id = index"
         [quote]="quote"
         (delete)="deleteQuote(false, id)"
+        (vote)="popularQuotes()"
       ></app-quote-item>
     </div>
   </div>

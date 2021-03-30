@@ -11,7 +11,7 @@ font-family: 'Roboto', sans-serif; */
   border-top: none;
   border-right: none;
   font-size: 19px;
-  font-family: "Pacifico", cursive;
+
 }
 hr {
   margin: 0;
@@ -38,6 +38,7 @@ em {
   padding-top: 20px;
   height: 170px;
   font-size: 25px;
+    font-family: "Pacifico", cursive;
 }
 
 .quote-author {

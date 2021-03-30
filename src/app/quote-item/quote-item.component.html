@@ -15,15 +15,12 @@
         />
       </div>
     </div>
-    <!-- <p appHighlightDirective *ngIf ="highestUpvote()===quote.upvotes && quote.upvotes>0"><span class="display-text">Quote:</span><br> {{quote.quote}}</p> -->
+  
     <div class="main-quote">
-      <p class="text-center"><em>"</em> {{ quote.quoteText }} <em>"</em></p>
+      <p  appHighestUpvote  class="text-center"><em>"</em> {{ quote.quoteText }} <em>"</em></p>
     </div>
     <div class="quote-author">
-      <div class="author">
-        - {{ quote.authorName }}
-      </div>
-    
+      <div class="author">- {{ quote.authorName }}</div>
     </div>
     <div class="details-button">
       <button
@@ -45,7 +42,7 @@
   <div class="quote-details mt-3" *ngIf="quote.showDetails">
     <app-quote-item-details
       [quote]="quote"
-      (like)="upvote()"
+      (like)="upvote(); popularQuotes()"
       (dislike)="downvote()"
     ></app-quote-item-details>
   </div>

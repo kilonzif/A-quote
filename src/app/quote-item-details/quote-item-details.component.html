@@ -4,7 +4,7 @@
       class="pr-2"
       src="../../assets/img/like.png"
       alt=""
-      (click)="likeQuote()"
+      (click)="likeQuote(0)"
     />
     <span class="upvotes pr-5">{{ quote.likes }}</span>
     <img
@@ -15,10 +15,13 @@
     />
     <span class="upvotes">{{ quote.dislikes }}</span>
   </div>
+  <div class="details">
   <div class="userDetails mt-3">
     posted by {{ quote.userName }} on {{ quote.datePosted | date }}
   </div>
-  <div class="posted-date">
+  <div class="posted-date mt-3">
     posted {{ quote.datePosted | dateCount }} days ago
   </div>
+  </div>
+
 </div>
