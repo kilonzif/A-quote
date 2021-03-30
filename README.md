@@ -2,7 +2,7 @@
 
 ## Description
 
-This is an angular apllication that allows user to create quotes.User can then upvote and downvote a quote and also he/she can delete the quote
+A-quote is a angular website project that allows a user to add a new quote, upvote or downvote existing quotes .The most upvoted quote is then highlighted. The user can also delete the quotes.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
@@ -29,10 +29,48 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 
 ## BDD
+### 1. ADD QUOTE
 
-- The user can add a quote by filling a form. The forms required inputs are the name of the person submitting the quote, the author of the quote and the quote. Upon submission of the form, the users quote will be displayed on the page.
-- The user can upvote or downvote a quote. The user will be able to see the number of upvotes a quote has. The user will also be able to see the quote with the highest upvotes.
-- The use can delete quotes.
+#### Inputs
+- Your Name
+- Quote title
+- Quote Description
+- Quote Author
+
+#### Behaviour
+User inputs the above inputs,clicks the add quote button and a new quote is created. If the user does not enter input and clicks button Add Quote,the user is prompted to input missing fields. When the user enters items in a field and then clears the field, an alert message is shown. 
+
+#### Outputs
+- New quote displayed by a card
+
+
+### 2. UPVOTE AND DOWNVOTE
+
+#### Button Clicks
+- Thumbs-up icon
+- Thumbs-down icon
+
+#### Behaviour
+
+User clicks on the thumbs up button to upvote and on the thumbs down button to downvote. The highest upvoted quote is then highlighted and a favoutite icon appears next to its title.
+
+#### Outputs
+
+- Most upvoted quote is highlighted
+
+### 3. DELETE QUOTE
+
+#### Button Clicks
+- Trash icon
+
+
+#### Behaviour
+
+User clicks on the trash icon to delete a quote,they will be prompted to confirm the action they have selected and then the specific quote is deleted
+
+#### Outputs
+
+- Selected quote is deleted
 
 ## Technologies Used
 
@@ -49,3 +87,13 @@ For any further questions, contributions or feedback, get in touch with me throu
 
 - Email: bwosihughes24@gmail.com
 - Phone: +254734505023
+
+### License
+
+[MIT License](https://github.com/MugeraH/A-quote/blob/main/license) Copyright (c) {2021}
+
+
+
+
+
+
