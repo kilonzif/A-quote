@@ -19,5 +19,24 @@ export class QuotesListComponent implements OnInit {
     }
   };
 
-
+  popularQuotes(): void {
+    const upvoted: number = Math.max.apply(
+      Math,
+      this.quotes.map((chosen) => chosen.likes)
+    );
+    if (upvoted > 0) {
+      const upvotedQuote: any = this.quotes.find(
+        (selected) => selected.likes === upvoted
+      );
+      const favIndex: number = this.quotes.indexOf(upvotedQuote);
+      this.quotes.map((quote) => {
+        if (favIndex === this.quotes.indexOf(quote)) {
+          this.quotes[favIndex].isFavorite = true;
+          console.log(favIndex);
+        } else {
+          quote.isFavorite = false;
+        }
+      });
+    }
+  }
 }

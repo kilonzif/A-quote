@@ -9,17 +9,10 @@ import { Quotes } from '../quotes';
 export class QuoteItemComponent implements OnInit {
   @Input() quote: Quotes;
   @Output() delete = new EventEmitter();
-  // @Output() highestUpVote = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  // highlightHighest() {
-  //   this.highestUpVote.emit();
-  // }
-
-
 
   toggleShowDetails = () => {
     this.quote.showDetails = !this.quote.showDetails;
@@ -35,4 +28,6 @@ export class QuoteItemComponent implements OnInit {
   deleteQuote = (id: any) => {
     this.delete.emit(id);
   };
+
+
 }

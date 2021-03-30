@@ -42,11 +42,10 @@ em {
 
 .quote-author {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
 }
-
 
 .quote-details {
   margin-top: 10px;
@@ -72,5 +71,6 @@ em {
   .main-quote {
     padding-top: 20px;
     height: 230px;
+    font-size: 21px;
   }
 }

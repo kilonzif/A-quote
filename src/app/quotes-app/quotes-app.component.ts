@@ -46,7 +46,8 @@ export class QuotesAppComponent implements OnInit {
       0,
       0,
       false,
-      this.color[this.colorFunction()]
+      this.color[this.colorFunction()],
+      false
     ),
     new Quotes(
       1,
@@ -54,11 +55,13 @@ export class QuotesAppComponent implements OnInit {
       'Cooking is like love. It should be entered into with abandon or not at all.',
       'Gusto Linguini',
       'Hope',
-      new Date(2021, 2, 14),
+      new Date(2020, 12, 1),
+
       0,
       0,
       false,
-      this.color[this.colorFunction()]
+      this.color[this.colorFunction()],
+      false
     ),
     new Quotes(
       1,
@@ -66,11 +69,13 @@ export class QuotesAppComponent implements OnInit {
       'One machine can do the work of fifty ordinary men.  No machine can do the work of one extraordinary man. ',
       'Elbert Hubbard',
       'Hughes',
-      new Date(2020, 12, 1),
+      new Date(2021, 2, 14),
+
       0,
       0,
       false,
-      this.color[this.colorFunction()]
+      this.color[this.colorFunction()],
+      false
     ),
   ];
 

@@ -10,6 +10,7 @@ export class QuoteItemDetailsComponent implements OnInit {
   @Input() quote: Quotes;
   @Output() like = new EventEmitter();
   @Output() dislike = new EventEmitter();
+  @Output() highestLikes = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
@@ -19,5 +20,8 @@ export class QuoteItemDetailsComponent implements OnInit {
   };
   dislikeQuote = () => {
     this.dislike.emit();
+  };
+  highest = () => {
+    this.highestLikes.emit();
   };
 }
