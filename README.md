@@ -6,6 +6,9 @@ A-quote is a angular website project that allows a user to add a new quote, upvo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
+## Live site
+
+Visit the live site [Here](https://a-quote.netlify.app/#)
 
 ## Author 
 
