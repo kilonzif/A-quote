@@ -1,27 +1,39 @@
 <div class="details-wrapper">
   <div class="votes icon mt-3 pl-2">
-    <img
-      class="pr-2"
-      src="../../assets/img/like.png"
+    <div class="vote-icon">
+      <img
+        class="pr-2"
+        src="../../assets/img/like.png"
+        alt=""
+        (click)="likeQuote(0)"
+      />
+      <span class="upvotes pr-5">{{ quote.likes }}</span>
+      <img
+        class="pr-2 mt-2"
+        src="../../assets/img/dislike.png"
+        alt=""
+        (click)="dislikeQuote()"
+      />
+
+      <span class="upvotes">{{ quote.dislikes }}</span>
+    </div>
+<div class="delete-icon">
+  <img
+      class=""
+      *ngIf="quote.showDetails"
+      src="../../assets/img/trash.png"
       alt=""
-      (click)="likeQuote(0)"
+      (click)="deleteQuote(quote.id)"
     />
-    <span class="upvotes pr-5">{{ quote.likes }}</span>
-    <img
-      class="pr-2 mt-2"
-      src="../../assets/img/dislike.png"
-      alt=""
-      (click)="dislikeQuote()"
-    />
-    <span class="upvotes">{{ quote.dislikes }}</span>
+</div>
+  
   </div>
   <div class="details">
-  <div class="userDetails mt-3">
-    posted by {{ quote.userName }} on {{ quote.datePosted | date }}
+    <div class="userDetails mt-3">
+      posted by {{ quote.userName }} on {{ quote.datePosted | date }}
+    </div>
+    <div class="posted-date mt-3">
+      posted {{ quote.datePosted | dateCount }} days ago
+    </div>
   </div>
-  <div class="posted-date mt-3">
-    posted {{ quote.datePosted | dateCount }} days ago
-  </div>
-  </div>
-
 </div>

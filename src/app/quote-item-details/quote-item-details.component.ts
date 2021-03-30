@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 import { Quotes } from '../quotes';
 
 @Component({
@@ -12,6 +13,7 @@ export class QuoteItemDetailsComponent implements OnInit {
   @Output() dislike = new EventEmitter();
   @Output() highestLikes = new EventEmitter();
   @Output() vote = new EventEmitter();
+  @Output() delete = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
@@ -26,4 +28,8 @@ export class QuoteItemDetailsComponent implements OnInit {
   highest = () => {
     this.highestLikes.emit();
   };
+
+  deleteQuote(id: any) {
+    this.delete.emit();
+  }
 }

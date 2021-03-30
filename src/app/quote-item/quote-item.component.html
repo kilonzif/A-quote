@@ -18,12 +18,23 @@
       </div>
 
       <div class="icon">
-        <img
-          *ngIf="quote.showDetails"
-          src="../../assets/img/trash.png"
-          alt=""
-          (click)="deleteQuote(quote.id)"
-        />
+        <div class="details-button">
+          <button
+            class="btn btn-outline-primary mt-3 text-white"
+            *ngIf="!quote.showDetails"
+            (click)="toggleShowDetails()"
+          >
+            Show More
+          </button>
+          <button
+            class="btn btn-outline-primary mt-3 text-white"
+            *ngIf="quote.showDetails"
+            (click)="toggleShowDetails()"
+          >
+            Show Less
+          </button>
+        
+        </div>
       </div>
     </div>
 
@@ -38,28 +49,13 @@
     <div class="quote-author">
       <div class="author">- {{ quote.authorName }}</div>
     </div>
-    <div class="details-button">
-      <button
-        class="btn btn-outline-primary mt-3 text-white"
-        *ngIf="!quote.showDetails"
-        (click)="toggleShowDetails()"
-      >
-        Show More
-      </button>
-      <button
-        class="btn btn-outline-primary mt-3 text-white"
-        *ngIf="quote.showDetails"
-        (click)="toggleShowDetails()"
-      >
-        Show Less
-      </button>
-    </div>
   </div>
   <div class="quote-details mt-3" *ngIf="quote.showDetails">
     <app-quote-item-details
       [quote]="quote"
       (like)="upvote(); popularQuotes()"
       (dislike)="downvote()"
+      (delete)="deleteQuote($event)"
     ></app-quote-item-details>
   </div>
 </div>

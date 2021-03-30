@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
@@ -38,9 +38,9 @@ export class QuotesAppComponent implements OnInit {
   quotes: Quotes[] = [
     new Quotes(
       1,
-      'Travel',
-      'For roads that lead to the unknown to roads that separete us to roads that takes us home',
-      'Hero Nakasaki',
+      'Motivation',
+      'The master has failed more times than the beginners has ever tried',
+      'Stephen McLranie',
       'Franklin',
       new Date(2019, 12, 11),
       0,
@@ -78,6 +78,7 @@ export class QuotesAppComponent implements OnInit {
       false
     ),
   ];
+
 
   addNewQuote = (quote: any) => {
     let quoteLength = this.quotes.length;
