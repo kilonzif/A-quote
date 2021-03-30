@@ -2,7 +2,18 @@
   <div class="quote-wrapper">
     <div class="title">
       <div class="quote-title">
-        {{ quote.quoteTitle }}
+        <div class="title-text">
+          {{ quote.quoteTitle }}
+          <span class="icon">
+            <img
+              src="../../assets/img/star.png"
+              *ngIf="quote.isFavorite"
+              alt=""
+              class="fav-icon"
+            />
+          </span>
+        </div>
+
         <hr [style.background-color]="quote.color" />
       </div>
 
@@ -15,9 +26,14 @@
         />
       </div>
     </div>
-  
+
     <div class="main-quote">
-      <p  appHighestUpvote  class="text-center"><em>"</em> {{ quote.quoteText }} <em>"</em></p>
+      <p *ngIf="!quote.isFavorite" class="text-center">
+        <em>"</em> {{ quote.quoteText }} <em>"</em>
+      </p>
+      <p *ngIf="quote.isFavorite" appHighestUpvote class="text-center">
+        <em>"</em> {{ quote.quoteText }} <em>"</em>
+      </p>
     </div>
     <div class="quote-author">
       <div class="author">- {{ quote.authorName }}</div>
