@@ -11,9 +11,9 @@ export class QuoteItemDetailsComponent implements OnInit {
   @Input() quote: Quotes;
   @Output() like = new EventEmitter();
   @Output() dislike = new EventEmitter();
-
   @Output() vote = new EventEmitter();
   @Output() delete = new EventEmitter();
+  
   constructor() {}
 
   ngOnInit(): void {}
@@ -25,8 +25,6 @@ export class QuoteItemDetailsComponent implements OnInit {
   dislikeQuote = () => {
     this.dislike.emit();
   };
-
-
   deleteQuote(id: any) {
     this.delete.emit();
   }
